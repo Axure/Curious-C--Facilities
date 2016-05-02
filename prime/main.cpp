@@ -183,6 +183,10 @@ class bool_set {
 
 };
 
+ostream &operator<<(ostream &os, const bool_set &bs) {
+  return os << bs.toString();
+}
+
 void test_bool_set() {
   assert(bool_set::get_bit_(7, 0) == true);
   assert(bool_set::get_bit_(7, 1) == true);
@@ -194,10 +198,25 @@ void test_bool_set() {
   a = bool_set::set_bit_(a, 2, true);
   a = bool_set::set_bit_(a, 3, false);
   assert(a == 7);
-}
 
-ostream &operator<<(ostream &os, const bool_set &bs) {
-  return os << bs.toString();
+
+  bool_set bs;
+  bs.push_back(true);
+  bs.push_back(false);
+  bs.push_back(false);
+  bs.push_back(true);
+  bs.push_back(false);
+  bs.push_back(false);
+  bs.push_back(false);
+  bs.push_back(false);
+  bs.push_back(false);
+  bs.push_back(false);
+  bs.push_back(false);
+  bs.push_back(true);
+  bs.push_back(false);
+
+  assert(bs.toString() == "1001000000010");
+  cout << bs;
 }
 
 int main() {
@@ -247,25 +266,6 @@ int main() {
   for (auto &triple: zipped_var) {
     cout << get<0>(triple) << ", " << get<1>(triple) << ", " << get<2>(triple) << "\n";
   }
-
-  bool_set bs;
-  bs.push_back(true);
-  bs.push_back(false);
-  bs.push_back(false);
-  bs.push_back(true);
-  bs.push_back(false);
-  bs.push_back(false);
-  bs.push_back(false);
-  bs.push_back(false);
-  bs.push_back(false);
-  bs.push_back(false);
-  bs.push_back(false);
-  bs.push_back(true);
-  bs.push_back(false);
-
-  assert(bs.toString() == "1001000000010");
-
-  cout << bs;
 
 
   return 0;
