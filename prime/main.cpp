@@ -4,6 +4,7 @@
 #include <list>
 #include <deque>
 #include <tuple>
+#include <algorithm>
 #include <cassert>
 #include <sstream>
 #include <unordered_map>
@@ -27,7 +28,7 @@ RS<tuple<LT, RT>, allocator<tuple<LT, RT>>> zip(L<LT, LA> &left, R<RT, RA> &righ
   RS<tuple<LT, RT>, allocator<tuple<LT, RT>>> result;
   auto size = lSize < rSize ? lSize : rSize;
   for (int i = 0; i < size; ++i) {
-    result.push_back(make_tuple(left.at(i), right.at(i)));
+    result.insert(result.end(), make_tuple(left.at(i), right.at(i)));
   }
   return result;
 };
@@ -41,9 +42,39 @@ class type_list {
 
 };
 
-template<template<typename, typename> class Cont, class ...Conts>
-Cont<tuple<Conts...>, allocator<tuple<Conts...>>> zip_var(Conts... containers) {
 
+
+template<template<typename, typename> class Cont, class LastCont>
+Cont<tuple<typename LastCont::value_type>,
+     allocator<tuple<typename LastCont::value_type>>> zip_var(LastCont lastContainer) {
+  Cont<tuple<typename LastCont::value_type>, allocator<tuple<typename LastCont::value_type>>> result;
+  for_each(lastContainer.begin(), lastContainer.end(), [&](auto &content) {
+    result.insert(result.end(), make_tuple(content));
+  });
+  return result;
+}
+
+template<template<typename, typename> class Cont, class FirstCont, class ...RestConts>
+Cont<tuple<typename FirstCont::value_type, typename RestConts::value_type...>,
+     allocator<tuple<typename FirstCont::value_type,
+                     typename RestConts::value_type...>>> zip_var(FirstCont firstContainer,
+                                                                  RestConts... restContainers) {
+  auto rightResult = zip_var<Cont>(restContainers...);
+  auto lSize = firstContainer.size();
+  auto rSize = rightResult.size();
+  Cont<tuple<typename FirstCont::value_type, typename RestConts::value_type...>,
+       allocator<tuple<typename FirstCont::value_type, typename RestConts::value_type...>>> result;
+  auto size = lSize < rSize ? lSize : rSize;
+  for (int i = 0; i < size; ++i) {
+    result.insert(
+        result.end(),
+        tuple_cat(
+            make_tuple(firstContainer.at(i)),
+            rightResult.at(i)
+        )
+    );
+  }
+  return result;
 }
 
 template<template<typename, typename> class Cont, class T, class A>
@@ -106,7 +137,7 @@ class bool_set {
     } else {
       number = number & (~(1 << index));
     }
-    return number ;
+    return number;
   }
 /** The interfaces. **/
  public:
@@ -130,7 +161,7 @@ class bool_set {
     return get_bit_(container_.at(periods), offset);
   }
 
-  bool_set& set(size_t index, bool value) {
+  bool_set &set(size_t index, bool value) {
     auto offset = index % int_size_;
     auto periods = index / int_size_;
     container_[periods] = set_bit_(container_.at(periods), index, value);
@@ -169,7 +200,7 @@ void test_bool_set() {
   assert(a == 7);
 }
 
-ostream &operator<< (ostream &os, const bool_set& bs) {
+ostream &operator<<(ostream &os, const bool_set &bs) {
   return os << bs.toString();
 }
 
@@ -209,7 +240,16 @@ int main() {
 
   auto zipped = zip<deque>(all, result);
   for (auto &number_pair: zipped) {
-//    cout << get<0>(number_pair) << ',' << get<1>(number_pair) << '\n';
+//    cout << get<0>(number_pair) << ", " << get<1>(number_pair) << "\n";
+  }
+
+  deque<int> a{1, 2, 3, 4};
+  deque<double> b{1.2, 3.4, 5.7};
+  list <string> c{"haha", "hehe", "xixi"};
+
+  auto zipped_var = zip_var<vector>(a, b, c);
+  for (auto &triple: zipped_var) {
+    cout << get<0>(triple) << ", " << get<1>(triple) << ", " << get<2>(triple) << "\n";
   }
 
   bool_set bs;
