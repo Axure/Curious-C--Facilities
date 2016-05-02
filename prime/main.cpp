@@ -43,10 +43,8 @@ class type_list {
 };
 
 
-
 template<template<typename, typename> class Cont, class LastCont>
-Cont<tuple<typename LastCont::value_type>,
-     allocator<tuple<typename LastCont::value_type>>> zip_var(LastCont lastContainer) {
+auto zip_var(LastCont lastContainer) {
   Cont<tuple<typename LastCont::value_type>, allocator<tuple<typename LastCont::value_type>>> result;
   for_each(lastContainer.begin(), lastContainer.end(), [&](auto &content) {
     result.insert(result.end(), make_tuple(content));
@@ -55,10 +53,8 @@ Cont<tuple<typename LastCont::value_type>,
 }
 
 template<template<typename, typename> class Cont, class FirstCont, class ...RestConts>
-Cont<tuple<typename FirstCont::value_type, typename RestConts::value_type...>,
-     allocator<tuple<typename FirstCont::value_type,
-                     typename RestConts::value_type...>>> zip_var(FirstCont firstContainer,
-                                                                  RestConts... restContainers) {
+auto zip_var(FirstCont firstContainer,
+             RestConts... restContainers) {
   auto rightResult = zip_var<Cont>(restContainers...);
   auto lSize = firstContainer.size();
   auto rSize = rightResult.size();
