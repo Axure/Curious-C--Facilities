@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <iostream>
 #include <thread>
 #include <list>
@@ -41,7 +42,7 @@ class type_list {
 };
 
 template<template<typename, typename> class Cont, class ...Conts>
-Cont<tuple<Conts...>, allocator<tuple<Conts...>>> zip(Conts... containers) {
+Cont<tuple<Conts...>, allocator<tuple<Conts...>>> zip_var(Conts... containers) {
 
 }
 
@@ -90,16 +91,16 @@ deque<int> normal_sieve(deque<int> &numbers) {
 
 class bool_set {
  private:
-  deque<int> container_;
+  deque<int64_t> container_;
   size_t size_ = 0;
 
-  static constexpr size_t int_size_ = sizeof(int) * 8; // 8 bits = 1 byte.
-  static bool get_bit_(int number, size_t index) {
+  static constexpr size_t int_size_ = sizeof(int64_t) * 8; // 8 bits = 1 byte.
+  static bool get_bit_(int64_t number, size_t index) {
     auto tool = 1 << index;
     return static_cast<bool>(number & tool);
   }
 
-  static int set_bit_(int number, size_t index, bool value) {
+  static int64_t set_bit_(int64_t number, size_t index, bool value) {
     if (value == true) {
       number = number | (1 << index);
     } else {
@@ -116,7 +117,7 @@ class bool_set {
 
   bool_set &push_back(bool value) {
     if (size_ % int_size_ == 0) {
-      container_.push_back(static_cast<int>(value));
+      container_.push_back(static_cast<int64_t>(value));
     } else {
       this->set(size_, value);
     }
@@ -147,8 +148,8 @@ class bool_set {
 
   string toString() const {
     ostringstream oss;
-    for (int i = 0; i < size_; ++i) {
-      oss << static_cast<int>(this->at(i));
+    for (int64_t i = 0; i < size_; ++i) {
+      oss << static_cast<int64_t>(this->at(i));
     }
     return oss.str();
   }
@@ -225,9 +226,11 @@ int main() {
   bs.push_back(false);
   bs.push_back(true);
   bs.push_back(false);
+
+  assert(bs.toString() == "1001000000010");
+
   cout << bs;
 
-  tuple_cat;
 
   return 0;
 }
