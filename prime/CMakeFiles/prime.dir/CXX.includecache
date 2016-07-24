@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/c/users/lluvi/ClionProjects/prime/main.cpp
+cstdint
+-
+iostream
+-
+thread
+-
+list
+-
+deque
+-
+tuple
+-
+algorithm
+-
+cassert
+-
+sstream
+-
+unordered_map
+-
+

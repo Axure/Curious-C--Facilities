@@ -1,0 +1,4 @@
+#ifndef AX_LEFTIST_HEAP_CUSTOM
+#define AX_LEFTIST_HEAP_CUSTOM
+
+#endif

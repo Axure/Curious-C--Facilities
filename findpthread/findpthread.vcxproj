@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{2DC2D4E3-E52B-4B11-9EA1-18D03B8FE685}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>findpthread</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\lluvi\ClionProjects\findpthread\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">findpthread.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">findpthread</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\lluvi\ClionProjects\findpthread\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">findpthread.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">findpthread</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\lluvi\ClionProjects\findpthread\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">findpthread.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">findpthread</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\lluvi\ClionProjects\findpthread\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">findpthread.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">findpthread</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -std=c99 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;THREAD_WIN32;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;THREAD_WIN32;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/lluvi/ClionProjects/findpthread/Debug/findpthread.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/lluvi/ClionProjects/findpthread/Debug/findpthread.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -std=c99 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;THREAD_WIN32;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;THREAD_WIN32;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/lluvi/ClionProjects/findpthread/Release/findpthread.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/lluvi/ClionProjects/findpthread/Release/findpthread.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -std=c99 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;THREAD_WIN32;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;THREAD_WIN32;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/lluvi/ClionProjects/findpthread/MinSizeRel/findpthread.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/lluvi/ClionProjects/findpthread/MinSizeRel/findpthread.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -std=c99 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;THREAD_WIN32;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;THREAD_WIN32;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/lluvi/ClionProjects/findpthread/RelWithDebInfo/findpthread.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/lluvi/ClionProjects/findpthread/RelWithDebInfo/findpthread.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lluvi\ClionProjects\findpthread\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/lluvi/ClionProjects/findpthread/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+E:\msys64_right\mingw64\bin\cmake.exe -HC:/Users/lluvi/ClionProjects/findpthread -BC:/Users/lluvi/ClionProjects/findpthread --check-stamp-file C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/lluvi/ClionProjects/findpthread/CMakeLists.txt;C:\Users\lluvi\ClionProjects\findpthread\CMakeLists.txt;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeSystem.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeRCInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindThreads.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckLibraryExists.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckSymbolExists.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/lluvi/ClionProjects/findpthread/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+E:\msys64_right\mingw64\bin\cmake.exe -HC:/Users/lluvi/ClionProjects/findpthread -BC:/Users/lluvi/ClionProjects/findpthread --check-stamp-file C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/lluvi/ClionProjects/findpthread/CMakeLists.txt;C:\Users\lluvi\ClionProjects\findpthread\CMakeLists.txt;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeSystem.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeRCInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindThreads.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckLibraryExists.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckSymbolExists.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/lluvi/ClionProjects/findpthread/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+E:\msys64_right\mingw64\bin\cmake.exe -HC:/Users/lluvi/ClionProjects/findpthread -BC:/Users/lluvi/ClionProjects/findpthread --check-stamp-file C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/lluvi/ClionProjects/findpthread/CMakeLists.txt;C:\Users\lluvi\ClionProjects\findpthread\CMakeLists.txt;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeSystem.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeRCInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindThreads.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckLibraryExists.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckSymbolExists.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/lluvi/ClionProjects/findpthread/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+E:\msys64_right\mingw64\bin\cmake.exe -HC:/Users/lluvi/ClionProjects/findpthread -BC:/Users/lluvi/ClionProjects/findpthread --check-stamp-file C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/lluvi/ClionProjects/findpthread/CMakeLists.txt;C:\Users\lluvi\ClionProjects\findpthread\CMakeLists.txt;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeSystem.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeRCInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindThreads.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckLibraryExists.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CheckSymbolExists.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\msys64_right\mingw64\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Users\lluvi\ClionProjects\findpthread\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\lluvi\ClionProjects\findpthread\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\lluvi\ClionProjects\findpthread\main.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/lluvi/ClionProjects/findpthread/ZERO_CHECK.vcxproj">
+      <Project>E66C284A-2E4A-4355-80F0-92A604315A01</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

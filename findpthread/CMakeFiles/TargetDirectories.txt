@@ -1,0 +1,3 @@
+C:/Users/lluvi/ClionProjects/findpthread/CMakeFiles/ALL_BUILD.dir
+C:/Users/lluvi/ClionProjects/findpthread/CMakeFiles/ZERO_CHECK.dir
+C:/Users/lluvi/ClionProjects/findpthread/CMakeFiles/findpthread.dir

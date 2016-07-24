@@ -1,0 +1,33 @@
+cmake_minimum_required(VERSION 3.3)
+project(findpthread)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
+
+FIND_PACKAGE (Threads REQUIRED)
+
+set(CMAKE_THREAD_PREFER_PTHREAD)
+
+if (${Threads_FOUND})
+#    message(INFO ${CMAKE_THREAD_LIBS_INIT})
+    message(INFO ${CMAKE_USE_PTHREADS_INIT})
+    message(INFO ${CMAKE_USE_WIN32_THREADS_INIT})
+    message(INFO ${CMAKE_USE_WIN32_THREADS_INIT})
+    message(INFO ${CMAKE_USE_WIN32_THREADS_INIT})
+    message(INFO Threads::Threads)
+        endif()
+
+if (${CMAKE_USE_WIN32_THREADS_INIT})
+    add_definitions(-DTHREAD_WIN32)
+        else()
+    add_definitions(_DTHREAD_POSIX)
+        endif()
+set(SOURCE_FILES main.c)
+add_executable(findpthread ${SOURCE_FILES})
+target_link_libraries(findpthread ${CMAKE_THREAD_LIBS_INIT})
+if (${CMAKE_USE_PTHREADS_INIT})
+    target_compile_definitions(findpthread PRIVATE THREAD_POSIX)
+    message(INFO "Haha")
+else()
+    message(INFO "hehe")
+    target_compile_definitions(findpthread PRIVATE THREAD_WIN32)
+endif()
