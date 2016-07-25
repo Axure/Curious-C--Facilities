@@ -16,6 +16,15 @@ set(CMAKE_AUTOMOC ON)
 find_package(Qt5Widgets REQUIRED)
 
 # Use the Widgets module from Qt 5.
-target_link_libraries(Haskell_Qt Qt5::Widget)
+target_link_libraries(Haskell_Qt Qt5::Widgets)
+
+set(Boost_USE_STATIC_LIBS        ON) # only find static libs
+set(Boost_USE_MULTITHREADED      ON)
+set(Boost_USE_STATIC_RUNTIME    OFF)
+find_package(Boost COMPONENTS filesystem system REQUIRED)
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+endif()
 
 add_executable(VirtualFunction VirtualFunction.cpp)
+target_link_libraries(Haskell_Qt ${Boost_LIBRARIES})
