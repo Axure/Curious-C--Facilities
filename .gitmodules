@@ -1,0 +1,3 @@
+[submodule "drawing-demo/verdigris"]
+	path = drawing-demo/verdigris
+	url = https://github.com/woboq/verdigris.git
